@@ -26,7 +26,7 @@ jobs:
       - name: set up edge-latest
         uses: browser-actions/setup-edge@v1
         with:
-          edge-version: latest
+          edge-version: stable
 
       - name: set up firefox-latest
         uses: browser-actions/setup-firefox@v1

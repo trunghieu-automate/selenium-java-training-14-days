@@ -2,7 +2,7 @@
 <suite name="Demo test suite">
     <test name="demo test">
         <classes>
-            <class name="day1.FirstTest" />
+            <class name="day14.GithubActionsTest" />
         </classes>
     </test>
 </suite>

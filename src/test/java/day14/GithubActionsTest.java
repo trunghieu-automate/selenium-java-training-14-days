@@ -1,4 +1,4 @@
-package day1;
+package day14;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -19,9 +18,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class FirstTest {
+public class GithubActionsTest {
     By toWebdriverPage = By.xpath("//a[@href='/documentation/webdriver/']");
     String webDriverPageTitle = "WebDriver | Selenium";
+    List<String> argsOptions = new ArrayList<>(){{
+        add("--no-sandbox");
+        add("--headless");
+        add("--disable-gpu");
+        add("--ignore-certificate-errors");
+        add("--disable-extensions");
+        add("--disable-dev-shm-usage");
+        add("disable-infobars");
+    } };
 
     @BeforeClass
     public void beforeEachClass (){
@@ -31,7 +39,9 @@ public class FirstTest {
     @Test
     public void edgeBrowserTest(){
         WebDriverManager.edgedriver().setup();
-        WebDriver driver = new EdgeDriver();
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments(argsOptions);
+        WebDriver driver = new EdgeDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
         Assert.assertEquals(driver.getTitle(), webDriverPageTitle);
@@ -41,7 +51,9 @@ public class FirstTest {
     @Test
     public void chromeBrowserTest(){
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(argsOptions).addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
         Assert.assertEquals(driver.getTitle(), webDriverPageTitle);
@@ -51,7 +63,9 @@ public class FirstTest {
     @Test
     public void firefoxBrowserTest(){
         WebDriverManager.firefoxdriver().setup();
-        WebDriver driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments(argsOptions);
+        WebDriver driver = new FirefoxDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
         Assert.assertEquals(driver.getTitle(), webDriverPageTitle);

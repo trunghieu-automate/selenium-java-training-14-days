@@ -18,17 +18,17 @@ jobs:
         with:
           java-version: '11'
 
-      - name: set up chrome-latest
+      - name: set up chrome-stable
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
 
-      - name: set up edge-latest
+      - name: set up edge-stable
         uses: browser-actions/setup-edge@v1
         with:
           edge-version: stable
 
-      - name: set up firefox-latest
+      - name: set up firefox-stable
         uses: browser-actions/setup-firefox@v1
         with:
           firefox-version: latest-esr
@@ -37,4 +37,4 @@ jobs:
         run: mvn -B clean package --file pom.xml
 
       - name: Run tests with Maven
-        run: mvn test --file pom.xml
+        run: mvn test -D suiteXmlFile=path/to/testng.xml --file pom.xml

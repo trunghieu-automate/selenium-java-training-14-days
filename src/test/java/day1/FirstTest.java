@@ -28,7 +28,6 @@ public class FirstTest {
         add("--no-sandbox");
         add("--disable-extensions");
         add("--disable-dev-shm-usage");
-        add("--remote-allow-origins=*");
     } };
 
     @BeforeClass
@@ -52,7 +51,7 @@ public class FirstTest {
     public void chromeBrowserTest(){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments(argsOptions);
+        options.addArguments(argsOptions).addArguments("--remote-allow-origins=*");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();

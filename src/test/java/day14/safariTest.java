@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 
-public class SafariTest {
+public class safariTest {
     By toWebdriverPage = By.xpath("//a[@href='/documentation/webdriver/']");
     String webDriverPageTitle = "WebDriver | Selenium";
     WebDriver driver;

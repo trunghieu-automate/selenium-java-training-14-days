@@ -14,7 +14,7 @@
 
     <test name="day-14-safari-test">
         <classes>
-            <class name="day14.SafariTest" />
+            <class name="day14.safariTest" />
         </classes>
     </test>
 </suite>

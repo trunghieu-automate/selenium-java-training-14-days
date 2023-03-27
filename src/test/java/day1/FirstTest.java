@@ -14,10 +14,21 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class FirstTest {
     By toWebdriverPage = By.xpath("//a[@href='/documentation/webdriver/']");
     String webDriverPageTitle = "WebDriver | Selenium";
+    List<String> argsOptions = new ArrayList<>(){{
+        add("--headless");
+        add("--disable-gpu");
+        add("--ignore-certificate-errors");
+        add("--no-sandbox");
+        add("--disable-extensions");
+        add("--disable-dev-shm-usage");
+    } };
 
     @BeforeClass
     public void beforeEachClass (){
@@ -28,7 +39,7 @@ public class FirstTest {
     public void edgeBrowserTest(){
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
-        options.addArguments("--headless");
+        options.addArguments(argsOptions);
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
@@ -40,7 +51,7 @@ public class FirstTest {
     public void chromeBrowserTest(){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments(argsOptions);
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
@@ -52,7 +63,7 @@ public class FirstTest {
     public void firefoxBrowserTest(){
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--headless");
+        options.addArguments(argsOptions);
         WebDriver driver = new FirefoxDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();

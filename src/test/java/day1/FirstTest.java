@@ -28,6 +28,7 @@ public class FirstTest {
         add("--no-sandbox");
         add("--disable-extensions");
         add("--disable-dev-shm-usage");
+        add("--remote-allow-origins=*");
     } };
 
     @BeforeClass

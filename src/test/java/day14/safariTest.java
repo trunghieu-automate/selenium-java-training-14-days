@@ -11,13 +11,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
-public class safariTest {
+
+public class SafariTest {
     By toWebdriverPage = By.xpath("//a[@href='/documentation/webdriver/']");
     String webDriverPageTitle = "WebDriver | Selenium";
     WebDriver driver;
-
 
     @BeforeClass
     public void beforeEachClass (){
@@ -28,7 +27,6 @@ public class safariTest {
         driver = new SafariDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         System.out.println("Run safari browser test");
-
     }
 
     @Test
@@ -36,7 +34,6 @@ public class safariTest {
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
         Assert.assertEquals(driver.getTitle(), webDriverPageTitle);
-
     }
 
     @AfterClass

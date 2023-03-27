@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-27T15:24:25 ICT" name="Demo test suite" finished-at="2023-03-27T15:24:51 ICT" duration-ms="26496">
+  <suite started-at="2023-03-27T15:41:23 ICT" name="Demo test suite" finished-at="2023-03-27T15:41:34 ICT" duration-ms="11197">
     <groups>
     </groups>
-    <test started-at="2023-03-27T15:24:25 ICT" name="demo test" finished-at="2023-03-27T15:24:51 ICT" duration-ms="26496">
+    <test started-at="2023-03-27T15:41:23 ICT" name="demo test" finished-at="2023-03-27T15:41:34 ICT" duration-ms="11197">
       <class name="day14.GithubActionsTest">
-        <test-method is-config="true" signature="beforeEachClass()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:24:25 ICT" name="beforeEachClass" finished-at="2023-03-27T15:24:25 ICT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="beforeEachClass()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:41:23 ICT" name="beforeEachClass" finished-at="2023-03-27T15:41:23 ICT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachClass -->
-        <test-method signature="chromeBrowserTest()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:24:25 ICT" name="chromeBrowserTest" finished-at="2023-03-27T15:24:32 ICT" duration-ms="7084" status="PASS">
+        <test-method signature="chromeBrowserTest()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:41:23 ICT" name="chromeBrowserTest" finished-at="2023-03-27T15:41:27 ICT" duration-ms="3877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chromeBrowserTest -->
-        <test-method signature="edgeBrowserTest()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:24:32 ICT" name="edgeBrowserTest" finished-at="2023-03-27T15:24:39 ICT" duration-ms="7157" status="PASS">
+        <test-method signature="edgeBrowserTest()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:41:27 ICT" name="edgeBrowserTest" finished-at="2023-03-27T15:41:31 ICT" duration-ms="3625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- edgeBrowserTest -->
-        <test-method signature="firefoxBrowserTest()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:24:39 ICT" name="firefoxBrowserTest" finished-at="2023-03-27T15:24:51 ICT" duration-ms="12223" status="PASS">
+        <test-method signature="firefoxBrowserTest()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:41:31 ICT" name="firefoxBrowserTest" finished-at="2023-03-27T15:41:34 ICT" duration-ms="3669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firefoxBrowserTest -->
-        <test-method is-config="true" signature="afterEachClass()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:24:51 ICT" name="afterEachClass" finished-at="2023-03-27T15:24:51 ICT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterEachClass()[pri:0, instance:day14.GithubActionsTest@609db43b]" started-at="2023-03-27T15:41:34 ICT" name="afterEachClass" finished-at="2023-03-27T15:41:34 ICT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachClass -->

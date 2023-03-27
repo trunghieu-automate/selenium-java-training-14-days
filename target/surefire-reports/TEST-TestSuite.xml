@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="TestSuite" time="26.47" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="TestSuite" time="11.173" errors="0" skipped="0">
   <properties>
-    <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.15.1+2-LTS-10"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.15.1\bin"/>
@@ -27,7 +26,6 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="suiteXmlFile" value="testNG.xml"/>
     <property name="classworlds.conf" value="D:\hieu.vu\apache-maven-3.8.6\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.15.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;%JAVA_HOME%\bin;C:\Program Files\Git\cmd;C:\usr\local\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Users\hieu.vu\AppData\Local\Android\Sdk;C:\Users\hieu.vu\AppData\Local\Android\Sdk\tools;C:\Users\hieu.vu\AppData\Local\Android\Sdk\platform-tools;C:\Users\hieu.vu\AppData\Local\Android\Sdk\platform-tools\bin;D:\hieu.vu\apache-maven-3.8.6\\bin;C:\Program Files\k6\;C:\Users\hieu.vu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\hieu.vu\AppData\Local\Programs\Python\Python310\;C:\Users\hieu.vu\AppData\Local\Microsoft\WindowsApps;;C:\Users\hieu.vu\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\hieu.vu\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;."/>
@@ -47,7 +45,7 @@
     <property name="java.class.path" value="D:\hieu.vu\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test -D suiteXmlFile=testNG.xml"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.15.1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -67,7 +65,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="day14.GithubActionsTest" name="chromeBrowserTest" time="7.089"/>
-  <testcase classname="day14.GithubActionsTest" name="edgeBrowserTest" time="7.157"/>
-  <testcase classname="day14.GithubActionsTest" name="firefoxBrowserTest" time="12.224"/>
+  <testcase classname="day14.GithubActionsTest" name="chromeBrowserTest" time="3.879"/>
+  <testcase classname="day14.GithubActionsTest" name="edgeBrowserTest" time="3.625"/>
+  <testcase classname="day14.GithubActionsTest" name="firefoxBrowserTest" time="3.669"/>
 </testsuite>

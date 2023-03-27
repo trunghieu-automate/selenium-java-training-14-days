@@ -43,6 +43,13 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>testNG.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <properties>
+                            <property>
+                                <name>testnames</name>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <value>${testName}</value>
+                            </property>
+                        </properties>
                     </configuration>
                 </plugin>
             </plugins>

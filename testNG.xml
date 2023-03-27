@@ -1,8 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Demo test suite">
-    <test name="demo test">
+    <test name="day-1-first-test">
+        <classes>
+            <class name="day1.FirstTest" />
+        </classes>
+    </test>
+
+    <test name="day-14-github-actions">
         <classes>
             <class name="day14.GithubActionsTest" />
+        </classes>
+    </test>
+
+    <test name="day-14-safari-test">
+        <classes>
+            <class name="day14.safariTest" />
         </classes>
     </test>
 </suite>

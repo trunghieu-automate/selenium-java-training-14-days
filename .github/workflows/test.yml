@@ -37,4 +37,4 @@ jobs:
         run: mvn -B clean package --file pom.xml
 
       - name: Run tests with Maven
-        run: mvn test -D suiteXmlFile=path/to/testng.xml --file pom.xml
+        run: mvn test -D suiteXmlFile=testng.xml --file pom.xml

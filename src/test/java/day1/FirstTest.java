@@ -28,6 +28,7 @@ public class FirstTest {
         add("--no-sandbox");
         add("--disable-extensions");
         add("--disable-dev-shm-usage");
+        add("disable-infobars");
     } };
 
     @BeforeClass
@@ -39,7 +40,7 @@ public class FirstTest {
     public void edgeBrowserTest(){
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
-        options.addArguments(argsOptions);
+        options.addArguments(argsOptions).addArguments("disable-dev-shm-usage");
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();

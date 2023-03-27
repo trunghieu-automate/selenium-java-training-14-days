@@ -37,7 +37,7 @@ jobs:
         run: mvn clean install -Dmaven.test.skip=true
 
       - name: Run specific testNG.xml file
-        run: mvn clean package -DtestName=day-14-github-actions
+        run: mvn test -DtestName=day-14-github-actions
 
   test-on-macos:
     runs-on: macos-latest
@@ -54,7 +54,7 @@ jobs:
         run: mvn clean install -Dmaven.test.skip=true
 
       - name: Run specific testNG.xml file
-        run: mvn clean package -DtestName=day-14-safari-test
+        run: mvn test -DtestName=day-14-safari-test
 
   test-on-window:
     runs-on: windows-latest
@@ -71,4 +71,4 @@ jobs:
         run: mvn clean install -Dmaven.test.skip=true
 
       - name: Run specific testNG.xml file
-        run: mvn clean test -DtestName=day-14-github-actions
+        run: mvn test -DtestName=day-14-github-actions

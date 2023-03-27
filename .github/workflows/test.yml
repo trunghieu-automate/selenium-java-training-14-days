@@ -47,21 +47,6 @@ jobs:
         with:
           java-version: '11'
 
-      - name: set up chrome-stable
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-
-      - name: set up edge-stable
-        uses: browser-actions/setup-edge@v1
-        with:
-          edge-version: stable
-
-      - name: set up firefox-stable
-        uses: browser-actions/setup-firefox@v1
-        with:
-          firefox-version: latest-esr
-
       - name: Run specific testNG.xml file
         run: mvn clean test -DtestName=day-14-safari-test
 
@@ -75,21 +60,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '11'
-
-      - name: set up chrome-stable
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-
-      - name: set up edge-stable
-        uses: browser-actions/setup-edge@v1
-        with:
-          edge-version: stable
-
-      - name: set up firefox-stable
-        uses: browser-actions/setup-firefox@v1
-        with:
-          firefox-version: latest-esr
 
       - name: Run specific testNG.xml file
         run: mvn clean test -DtestName=day-14-github-actions

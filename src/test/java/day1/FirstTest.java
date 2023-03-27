@@ -4,8 +4,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -24,6 +27,8 @@ public class FirstTest {
     @Test
     public void edgeBrowserTest(){
         WebDriverManager.edgedriver().setup();
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless");
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
@@ -31,10 +36,12 @@ public class FirstTest {
         driver.quit();
     }
 
-    @Test(enabled=false)
+    @Test
     public void chromeBrowserTest(){
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
         Assert.assertEquals(driver.getTitle(), webDriverPageTitle);
@@ -44,7 +51,9 @@ public class FirstTest {
     @Test
     public void firefoxBrowserTest(){
         WebDriverManager.firefoxdriver().setup();
-        WebDriver driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new FirefoxDriver(options);
         driver.get("https://www.selenium.dev/");
         driver.findElement(toWebdriverPage).click();
         Assert.assertEquals(driver.getTitle(), webDriverPageTitle);

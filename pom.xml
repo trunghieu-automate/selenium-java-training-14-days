@@ -41,6 +41,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <configuration>
                         <suiteXmlFiles>
+                            <!--suppress UnresolvedMavenProperty -->
                             <suiteXmlFile>testNG.xml</suiteXmlFile>
                         </suiteXmlFiles>
                         <properties>

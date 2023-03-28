@@ -6,6 +6,12 @@
         </classes>
     </test>
 
+    <test name="day-11-edge-test">
+        <classes>
+            <class name="day11.EdgeTest" />
+        </classes>
+    </test>
+
     <test name="day-14-github-actions">
         <classes>
             <class name="day14.GithubActionsTest" />
@@ -17,4 +23,5 @@
             <class name="day14.safariTest" />
         </classes>
     </test>
+
 </suite>

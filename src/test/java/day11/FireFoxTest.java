@@ -4,21 +4,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import java.time.Duration;
 
-public class EdgeTest {
+public class FireFoxTest {
     By toWebdriverPage = By.xpath("//a[@href='/documentation/webdriver/']");
     String webDriverPageTitle = "WebDriver | Selenium";
     WebDriver driver;
 
     @BeforeTest
     public void beforeTest(){
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

@@ -12,6 +12,12 @@
         </classes>
     </test>
 
+    <test name="day-11-firefox-test">
+        <classes>
+            <class name="day11.FireFoxTest" />
+        </classes>
+    </test>
+
     <test name="day-14-github-actions">
         <classes>
             <class name="day14.GithubActionsTest" />
